@@ -1,0 +1,73 @@
+:root {
+    --color-plum: #822872;
+    --color-forest-green: #34594b;
+    --color-frog-green: #18b579;
+    --color-silver: #bababa;
+
+    --font-hero: 'Quicksand', sans-serif;
+    --font-copy: 'Open_Sans', sans-serif;    
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quicksand'), url('./Quicksand/Quicksand-VariableFont_wght.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Open_Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Open_Sans'), url('./Open_Sans/OpenSans-Regular.ttf') format('opentype');
+}
+
+body {
+    font-family: var(--font-copy);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-hero);
+}
+
+
+#nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav > a {
+    font-size: 1.2em;
+    text-decoration: none;
+    margin: 10px;
+    color: var(--color-plum);
+}
+
+a {
+    text-decoration: none;
+    color: #18b579;
+}
+
+#popular {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#popular > .card {
+    display: flex;
+    flex-direction: column;
+    height: 310px;
+    width: 300px;
+    border: solid var(--color-silver) 1px;
+    margin: 10px;
+    box-shadow: 10px 5px 10px #a1a1a1;
+}
+
+#popular > .card > img {
+    height: 100px;
+}
+
+#popular > .card > p {
+    margin: 5px 10px;
+}

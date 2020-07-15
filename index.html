@@ -24,10 +24,11 @@
 				</header>
 			</section>
 
-			<!-- banner -->
-			<section>
-				<h1>...Color.com is awesome...</h1>
-			</section>
+            <!-- banner -->
+            <div>
+                <ticker-tape>Color.com is awesome</ticker-tape>
+                <script src="./js/ticker-tape.js"></script>
+            </div>
 
 
 			<!-- section about - -->
@@ -96,15 +97,15 @@
 				<div>
 					<form>
 						<label>
-							name
+                            <p>Name</p>
 							<input type="text">
 						</label>
 						<label>
-							Subject
+                            <p>Subject</p>
 							<input type="text">
 						</label>
 						<label>
-							Message
+                            <p>Message</p>
 							<textarea></textarea>
 						</label>
 						<button>Submit</button>
@@ -126,22 +127,445 @@
 		</main>
 
 		<style>
+            :root {
+                --color-red: #f70202;
+                --color-light-coral: #fa4b4b;
+                --color-coral: #ed3737;
+                --color-brick: #b52d2d;
+                --color-taupe: #b54c4c;
+                --color-other-red: #9c2d2d;
+                --color-brown-red: #823333;
+                --color-blood: #800e0e;
+                --color-maroon: #730303;
+                --color-dark-brown-red: #451010;
+                --color-beige: #f7b97e;
+                --color-apricot: #f59b56;
+                --color-nude-orange: #fa8148;
+                --color-orange: #ed7a0e;
+                --color-tangerine: #fc6d00;
+                --color-burnt-tangerine: #f76902;
+                --color-peach: #fc7130;
+                --color-light-orange-brown: #9c592a;
+                --color-orange-brown: #9c3505;
+                --color-brown: #5e1f02;
+                --color-plum: #822872;
+                --color-forest-green: #34594b;
+                --color-frog-green: #18b579;
+                --color-silver: #bababa; 
+            }
+
 			.swatch {
 				width: 100px;
 				height: 100px;
 				background-color: antiquewhite;
 				margin: 2px;
-				border: 1px solid;
+                border-radius: 50%;
 			}
 
 			.swatches {
 				display: flex;
 				flex-wrap: wrap;
-			}
+            }
+            
+            .swatches :nth-child(1) {
+                background-color: var(--color-red) !important;
+            }
 
-			.swatch {
-				background-color: red !important;
-			}
+            .swatches :nth-child(2) {
+                background-color: var(--color-light-coral) !important;
+            }
+
+            .swatches :nth-child(3) {
+                background-color: var(--color-coral) !important;
+            }
+
+            .swatches :nth-child(5) {
+                background-color: var(--color-brick) !important;
+            }
+
+            .swatches :nth-child(4) {
+                background-color: var(--color-taupe) !important;
+            }
+
+            .swatches :nth-child(6) {
+                background-color: var(--color-other-red) !important;
+            }
+
+            .swatches :nth-child(7) {
+                background-color: var(--color-brown-red) !important;
+            }
+
+            .swatches :nth-child(8) {
+                background-color: var(--color-blood) !important;
+            }
+
+            .swatches :nth-child(9) {
+                background-color: var(--color-maroon) !important;
+            }
+
+            .swatches :nth-child(10) {
+                background-color: var(--color-dark-brown-red) !important;
+            }
+
+            .swatches :nth-child(11) {
+                background-color: var(--color-beige) !important;
+            }
+
+            .swatches :nth-child(12) {
+                background-color: var(--color-apricot) !important;
+            }
+
+            .swatches :nth-child(13) {
+                background-color: var(--color-nude-orange) !important;
+            }
+
+            .swatches :nth-child(14) {
+                background-color: var(--color-orange) !important;
+            }
+
+            .swatches :nth-child(15) {
+                background-color: var(--color-tangerine) !important;
+            }
+
+            .swatches :nth-child(16) {
+                background-color: var(--color-burnt-tangerine) !important;
+            }
+
+            .swatches :nth-child(17) {
+                background-color: var(--color-peach) !important;
+            }
+
+            .swatches :nth-child(18) {
+                background-color: var(--color-light-orange-brown) !important;
+            }
+
+            .swatches :nth-child(19) {
+                background-color: var(--color-orange-brown) !important;
+            }
+
+            .swatches :nth-child(20) {
+                background-color: var(--color-brown) !important;
+            }
+
+            .swatches :nth-child(21) {
+                background-color: #fcf800 !important;
+            }
+
+            .swatches :nth-child(22) {
+                background-color: #f5f25b !important;
+            }
+
+            .swatches :nth-child(23) {
+                background-color: #c4c11d !important;
+            }
+
+            .swatches :nth-child(24) {
+                background-color: #fad21e !important;
+            }
+
+            .swatches :nth-child(25) {
+                background-color: #fae482 !important;
+            }
+
+            .swatches :nth-child(26) {
+                background-color: #faeebb !important;
+            }
+
+            .swatches :nth-child(27) {
+                background-color: #c8cf19 !important;
+            }
+
+            .swatches :nth-child(28) {
+                background-color: #949101 !important;
+            }
+
+            .swatches :nth-child(29) {
+                background-color: #faf75c !important;
+            }
+
+            .swatches :nth-child(30) {
+                background-color: #d4d024 !important;
+            }
+
+            .swatches :nth-child(31) {
+                background-color: #27e31e !important;
+            }
+
+            .swatches :nth-child(32) {
+                background-color: #70a36d !important;
+            }
+
+            .swatches :nth-child(33) {
+                background-color: #145910 !important;
+            }
+
+            .swatches :nth-child(34) {
+                background-color: #034010 !important;
+            }
+
+            .swatches :nth-child(35) {
+                background-color: #85d466 !important;
+            }
+
+            .swatches :nth-child(36) {
+                background-color: #44b816 !important;
+            }
+
+            .swatches :nth-child(37) {
+                background-color: #b7f277 !important;
+            }
+
+            .swatches :nth-child(38) {
+                background-color: #2a381b !important;
+            }
+
+            .swatches :nth-child(39) {
+                background-color: #83c995 !important;
+            }
+
+            .swatches :nth-child(40) {
+                background-color: #2b8021 !important;
+            }
+
+            .swatches :nth-child(41) {
+                background-color: #51f5e7 !important;
+            }
+
+            .swatches :nth-child(42) {
+                background-color: #00e0cd !important;
+            }
+
+            .swatches :nth-child(43) {
+                background-color: #085952 !important;
+            }
+
+            .swatches :nth-child(44) {
+                background-color: #9fede6 !important;
+            }
+
+            .swatches :nth-child(45) {
+                background-color: #12e3a8 !important;
+            }
+
+            .swatches :nth-child(46) {
+                background-color: #05a175 !important;
+            }
+
+            .swatches :nth-child(47) {
+                background-color: #034a42 !important;
+            }
+
+            .swatches :nth-child(48) {
+                background-color: #3eb0a3 !important;
+            }
+
+            .swatches :nth-child(49) {
+                background-color: #0b3631 !important;
+            }
+
+            .swatches :nth-child(50) {
+                background-color: #7ee0e6 !important;
+            }
+
+            .swatches :nth-child(51) {
+                background-color: #5e7ae0 !important;
+            }
+
+            .swatches :nth-child(52) {
+                background-color: #0238fa !important;
+            }
+
+            .swatches :nth-child(53) {
+                background-color: #0e1f59 !important;
+            }
+
+            .swatches :nth-child(54) {
+                background-color: #010c30 !important;
+            }
+
+            .swatches :nth-child(55) {
+                background-color: #3d3de3 !important;
+            }
+
+            .swatches :nth-child(56) {
+                background-color: #090996 !important;
+            }
+
+            .swatches :nth-child(57) {
+                background-color: #6d9ede !important;
+            }
+
+            .swatches :nth-child(58) {
+                background-color: #7f98ba !important;
+            }
+
+            .swatches :nth-child(59) {
+                background-color: #227af5 !important;
+            }
+
+            .swatches :nth-child(60) {
+                background-color:#0c4799 !important;
+            }
+
+            .swatches :nth-child(61) {
+                background-color: #bf37fa !important;
+            }
+
+            .swatches :nth-child(62) {
+                background-color: #c171e3 !important;
+            }
+
+            .swatches :nth-child(63) {
+                background-color: #4b1e5e !important;
+            }
+
+            .swatches :nth-child(64) {
+                background-color: #4a0369 !important;
+            }
+
+            .swatches :nth-child(65) {
+                background-color: #d4b3e3 !important;
+            }
+
+            .swatches :nth-child(66) {
+                background-color: #8c00ff !important;
+            }
+
+            .swatches :nth-child(67) {
+                background-color: #540d8f !important;
+            }
+
+            .swatches :nth-child(68) {
+                background-color: #2d113b !important;
+            }
+
+            .swatches :nth-child(69) {
+                background-color: #774c8c !important;
+            }
+
+            .swatches :nth-child(70) {
+                background-color:#755b82 !important;
+            }
+
+            .swatches :nth-child(71) {
+                background-color: #ff00ea !important;
+            }
+
+            .swatches :nth-child(72) {
+                background-color: #f5c6f1 !important;
+            }
+
+            .swatches :nth-child(73) {
+                background-color: #f04fe2 !important;
+            }
+
+            .swatches :nth-child(74) {
+                background-color: #b518a7 !important;
+            }
+
+            .swatches :nth-child(75) {
+                background-color: #ed34c2 !important;
+            }
+
+            .swatches :nth-child(76) {
+                background-color: #f768d6 !important;
+            }
+
+            .swatches :nth-child(77) {
+                background-color: #f29bde !important;
+            }
+
+            .swatches :nth-child(78) {
+                background-color: #f7e4f3 !important;
+            }
+
+            .swatches :nth-child(79) {
+                background-color:#e3b3d9 !important;
+            }
+
+            .swatches :nth-child(80) {
+                background-color:#d647b8 !important;
+            }
+
+            .swatches :nth-child(81) {
+                background-color: #8f8377 !important;
+            }
+
+            .swatches :nth-child(82) {
+                background-color: #45301c !important;
+            }
+
+            .swatches :nth-child(83) {
+                background-color: #3d2107 !important;
+            }
+
+            .swatches :nth-child(84) {
+                background-color:#5c4c3e !important;
+            }
+
+            .swatches :nth-child(85) {
+                background-color: #614831 !important;
+            }
+
+            .swatches :nth-child(86) {
+                background-color: #61533a !important;
+            }
+
+            .swatches :nth-child(87) {
+                background-color: #3d2f17 !important;
+            }
+
+            .swatches :nth-child(88) {
+                background-color: #634e29 !important;
+            }
+
+            .swatches :nth-child(89) {
+                background-color:#47310a !important;
+            }
+
+            .swatches :nth-child(90) {
+                background-color:#7a633a !important;
+            }
+
+            .swatches :nth-child(91) {
+                background-color: #dededc !important;
+            }
+
+            .swatches :nth-child(92) {
+                background-color: #878786 !important;
+            }
+
+            .swatches :nth-child(93) {
+                background-color: #575755 !important;
+            }
+
+            .swatches :nth-child(94) {
+                background-color:#1a1a18 !important;
+            }
+
+            .swatches :nth-child(95) {
+                background-color: #030300 !important;
+            }
+
+            .swatches :nth-child(96) {
+                background-color: #7a7a7a !important;
+            }
+
+            .swatches :nth-child(97) {
+                background-color: #4a4a4a !important;
+            }
+
+            .swatches :nth-child(98) {
+                background-color: #bdbdbd !important;
+            }
+
+            .swatches :nth-child(99) {
+                background-color:#636363 !important;
+            }
+
+            .swatches :nth-child(100) {
+                background-color:#242222 !important;
+            }
 
 			main {
 				width: 600px;
